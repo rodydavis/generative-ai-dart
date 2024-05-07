@@ -13,7 +13,7 @@
     ];
     bootstrap = ''
         mkdir -p "$WS_NAME/"
-        cp -rf ${./} "$WS_NAME/"
+        cp -rf ${./.} "$WS_NAME/"
         rm "$WS_NAME/idx-template.nix
         rm "$WS_NAME/idx-template.json
         mv "$WS_NAME" "$out"
