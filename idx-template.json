@@ -1,0 +1,10 @@
+{
+  "name": "Flutter",
+  "description": "GenAI Template",
+  "categories": ["Backend"],
+  "icon": "https://www.gstatic.com/monospace/231115/logo_python.svg",
+  "publisher": "Google",
+  "host": {
+     "virtualization": true
+  }
+}
