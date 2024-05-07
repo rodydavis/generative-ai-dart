@@ -12,10 +12,12 @@
         pkgs.busybox
     ];
     bootstrap = ''
-        cp -rf ${./} "$out"
+        mkdir -p "$WS_NAME/"
+        cp -rf ${./} "$WS_NAME/"
+        rm "$WS_NAME/idx-template.nix
+        rm "$WS_NAME/idx-template.json
+        mv "$WS_NAME" "$out"
         chmod -R +w "$out"
-        rm "$out/idx-template.nix
-        rm "$out/idx-template.json
         cp -rf ${flutter} flutter
         chmod -R u+w flutter
         mkdir -p "$out"/.{flutter-sdk,idx}
