@@ -12,13 +12,13 @@
         pkgs.busybox
     ];
     bootstrap = ''
+        cp -rf ${./} "$out"
+        chmod -R +w "$out"
+        rm "$out/idx-template.nix
+        rm "$out/idx-template.json
         cp -rf ${flutter} flutter
         chmod -R u+w flutter
-        PUB_CACHE=/tmp/pub-cache ./flutter/bin/flutter create "$out"
         mkdir -p "$out"/.{flutter-sdk,idx}
         mv flutter "$out/.flutter-sdk/flutter"
-
-        echo ".flutter-sdk/flutter" >> "$out/.gitignore"
-        install --mode u+rw ${./dev.nix} "$out"/.idx/dev.nix
     '';
 }
